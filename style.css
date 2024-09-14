@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 50px !important;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.message{
+    max-width: 60%;
+    margin: 5px 10%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.user-message{
+    align-self: flex-end;
+    background-color: cornflowerblue;
+    color:white;
+    max-width: 50%;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.bot-message{
+    align-self: flex-start;
+    background-color: coral;
+    max-width: 50%;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+
+.chat-form{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.chat-input{
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.loader {
+    display: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2D81D8;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite; /* 'linerar' → 'linear' に修正 */
+}
+
+#chat-send {
+    width: 100px; /* 幅を広げる */
+    height: 30px; /* 高さを調整 */
+    padding: 2px; /* 内側の余白を調整 */
+    font-size: 16px; /* テキストサイズを調整 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* 'rotete' → 'rotate' に修正 */
+    100% { transform: rotate(360deg); }
+}

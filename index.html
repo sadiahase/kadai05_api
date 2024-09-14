@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-eval';">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>ichatGPT</title>
+</head>
+<body>
+    <div class="container messages"></div>
+
+    <form class="chat-form" id="chat-form">
+        <input type="text" class="chat-input" id="chat-input" placeholder="ご質問をどうぞ...">
+        <button type="submit" class="chat-send" id="chat-send">
+            <!-- <img src="send-icon.png" width="20px" height="20px" alt="Send" id="send-img"> -->
+             送 信
+        </button>
+        <div class="loader"></div>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
